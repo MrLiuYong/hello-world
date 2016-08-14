@@ -1,0 +1,10 @@
+1：
+ order by:对查询结果排序;
+  原理=> 使用select语句获取数据表中的数据时，返回的记录一般是无规则排列的，有可能每次获取的查询记录截然不同，为了使检索的结果方便阅读
+      可以在select语句中使用 ORDER BY子句，对检索的结果进行排序
+eg:select bookid,bookname from books order by bookid desc;=>表示从books表中查询bookid,bookname,其中根据bookid来降序排列(desc降序)(asc升序)
+2：
+ group by：对查询结果按照某个条件来分组；
+ 原理=>group by子句将表按照列值分组，列的值相同的为一组；
+      eg:select AVG(price) '平均图书价格' ,SUM(price) '总价格'from books group catid;=>即将图书信息表books的数据按图书类别ID分组；
+ 
